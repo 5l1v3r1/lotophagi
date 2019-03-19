@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>Lotophagi: Lotus Notes default Database scanner</title>
+</head>
+<body>
+<center><img src="loto.gif" alt="Lotophagi"><font size="4" face="Arial" color="00009a">
+Lotophagi: The Lotus Eater
+</font>
+<br><br>
+<font size="2" face="Arial">
+(c) 2007 by Michael Kemp (clappymonkey) www.clappymonkey.com<br><br>
+<i>"All things have rest, and ripen toward the grave<br>	
+In silence—ripen, fall, and cease:<br>	
+Give us long rest or death, dark death, or dreamful ease."</i><br>
+Tennyson<br><br>
+</center>
+<b>Introduction</b><br>
+Lotophagi is a new tool designed to quickly scan Lotus Notes databases for default databases that are installed, and may or may not have been disabled. The tool is principally proof of concept and has been written to prove a point, namely that there are not any useful Notes specific scanners out there that can be used without spending a small fortune!<br><br>
+This tool has been written to assist security consultants and researchers in the remote penetration testing of Lotus Notes environments, and saves an awful lot of blind cutting and pasting! It goes without sating that this tool should only be used for legitimate assessment activities and not for blind scans of remote hosts that you have no permissions to scan (for one things it's very noisy and not at all polite).<br><br>
+Currently, Lotophagi supports checks for over one hundred default and common Lotus Notes database instances, and support is planned for object, document and command enumeration in a future release.<br><br>
+<b>Usage</b><br>
+Using Lotophagi is trivial. Extract lotophagi.pl to a working directory, and specify an input URL or IP in a text file stored in the same dir. Specify the text file after launching Lotophagi from the terminal window / command line. Results are stored in the same working directory in the 'results.log' file. Unsurprisingly enough you will need Perl installed to make Lotophagi work - provided you do, just enter 'lotophagi.pl' in the terminal window / command line, sit back, and let Lotophagi take the strain...<br><br>
+<b>Bugs</b><br>
+It's a Perl script what can go wrong? Well, as far as I know, nothing, however, I am often wrong. If you encounter a bug, or think of any other default / common nsf, log, or box databases that I've missed, let me know at clappymonkey'at'gmail'dot'com. Thanks. One bug that I already know about is that Lopophagi really doesn't like page redirects. Basically it's quite stipid and how it works is that it checks for either a 200 or 404 response from a remote server. If it gets a 200 (any 200) it interprets this as being a valid DB. That said, I've checked the tool against actual Domino boxes and it works fine, just don't expect it to work against digg or similar...<br><br>
+<b>Coming Attractions</b><br>
+At some point I will get around to extending Lotophagi and introducing a number of key features, namely: Checks for default / dangerous DB objects, checks for default / dangerous DB commands ($ReadEntries anyone?), document enumeration, pretty cross platform GUI. What I really want to do is write an open source Lotus scanning engine, and that's what I am working on at the moment. Sadly I have a day job, but when and if I find the time, I may sort this out - until then, I hope that this tool is of use in your Lotus assessment activities.<br><br>
+<b>Why the name?</b><br>
+The Lotophagi were an ancient tribe (according to Greek legend) that lived on an island off the coast of Africa. Their principal food stuff was lotus plants, which had the side effect of being principally narcotic, and causing a state of peaceful apathy for any that ate them. I thought this was pretty indicative of the state of most admins view of Lotus Notes security...<br><br>
+<b>License</b><br>
+This tool is provided free and gratis. Should you make use of any of the code, please credit me accordingly. Should you use this tool to make any money, please be aware that I don't have a legal team, but I do have an army of invisible ninja monkey pirates who will track you down and exact karmic revenge!<br><br>
+<b>Wish List</b><br>
+Ask anyone - they'll tell you; I can't code. My cat has a better understanding of pointers and arrays than me. That's why I need a code ninja to help in the dev of the Lotophagi framework (to save what remains of my addled brain, and stop me sobbing in my pint). If you think you can, or want to contribute, get in touch. Thanks much.<br><br> 
+Have fun - play nice - and take her easy<br>
+MK/clappymonkey
+</font>
+</body>
+</html>
